@@ -1,0 +1,19 @@
+<?php
+
+echo "<pre>";
+
+$planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "", "", NULL];
+function gezegenSec($array, $value): array
+{
+    $filteredArray = array_filter($array);
+    $randomizedArray = array_rand($filteredArray, $value);
+    return array_map(function ($item) use ($filteredArray) {
+        return $filteredArray[$item];
+    }, $randomizedArray);
+}
+
+print_r(gezegenSec($planets, 2));
+print_r(gezegenSec($planets, 3));
+print_r(gezegenSec($planets, 2));
+print_r(gezegenSec($planets, 4));
+print_r(gezegenSec($planets, 5));
