@@ -1,0 +1,23 @@
+<?php
+
+function ucgenCiz($deger)
+{
+    for($i=1;$i<=$deger;$i++)
+    {
+        $ilkDeger=0;
+        while($ilkDeger < $i)
+        {
+            echo "0";
+            $ilkDeger++;
+        }
+        echo "<br>";
+
+    }
+
+}
+
+
+ucgenCiz(5);
+
+
+?>
